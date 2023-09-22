@@ -15,10 +15,36 @@
             git add README.md
             git commit -m "first commit"
             git branch -M main
-            git remote add origin https://github.com/HashirAsmat/testing.git
+            git remote add origin https://github.com/HashirAsmat/practicing-git.git
             git push -u origin main
             
         </h4>
+        <h4>some times when u wrtie this command " git remote add origin https://github.com/HashirAsmat/practicing-git.git" <br>
+        you get an Error i-e <br>
+        error: remote origin already exists.
+
+        <br>
+        reason:
+        First time when you wanna connect with your remote Repo , the .git hidden file makes and origin (connection) of your local dir and your remote Repo this usually happen when u are uploading your first commit changes to your remote repo, this connection (origin) is established only when you are doing it for the first time so at first time you would not get any error , But! once git has build the connection , when you are uploading the commit or pushing the commits for the second time , the connection (origin) already exist , git will give u that error. for the second time you dont need to write this command again -> git remote add origin https://github.com/HashirAsmat/practicing-git.git , But you can simple push the changes   -> git push -u origin main 
+        </h4>
     </h1>
+
+    <p> error: remote origin already exists. <br>
+    in Details: <br>
+    When you first connect your local Git repository to a remote repository (e.g., on GitHub), Git creates a remote connection named "origin." This connection includes the URL of the remote repository. <br>
+
+    After this initial setup, you don't need to re-run the git remote add origin command because the "origin" remote is already configured. <br>
+
+    When you want to push changes to the remote repository again, you can simply use git push -u origin main (or the appropriate branch name) to push your changes. The -u flag is used to set the upstream branch, making it easier to push changes in the future without specifying the remote and branch names each time. <br>
+
+    In summary, the "remote origin already exists" error is a reminder that you've already configured the "origin" remote, and you don't need to add it again. You can directly push your changes using git push once the initial setup is complete.
+
+
+
+
+
+
+    
+    </p>
 </body>
 </html>
